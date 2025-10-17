@@ -14,6 +14,9 @@ console.log("Hey Mongoose!")
 
 const app = express()
 
+app.use(express.json());
+
+
 app.get('/', (req,res) => {
     res.send('<h1>Good morning, Nicole!</h1> <h2>Pay attention!</h2><h3>Are you still there?</h3>')
 })
