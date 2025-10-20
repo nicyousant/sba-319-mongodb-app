@@ -1,4 +1,5 @@
-import db from '../db.js'
+import { db } from '../db/conn.js'
+import User from '../models/users.js'
 
 
 const users = [
@@ -20,12 +21,31 @@ const users = [
 ]
 
 // function is not required here, but is best practice
+// MongoDB version
+//  async function seedDatabase() {
+//     try{
+//         console.log("seeding user data");
+//         const collection = await db.collection("users")
+//         const resultDelete = await collection.deleteMany({})
+//         const resultInsert = await collection.insertMany(users)
+//         console.log(resultDelete)
+//         console.log(resultInsert)
+//         console.log("Complete!")
+//     } catch (e) {
+//         console.log(e);
+//     }
+//     process.exit()
+// }
+
+// seedDatabase()
+
+// Mongoose version
  async function seedDatabase() {
     try{
         console.log("seeding user data");
-        const collection = await db.collection("users")
-        const resultDelete = await collection.deleteMany({})
-        const resultInsert = await collection.insertMany(users)
+        // const collection = await mongoose.connect("users")
+        const resultDelete = await User.deleteMany({})
+        const resultInsert = await User.insertMany(users)
         console.log(resultDelete)
         console.log(resultInsert)
         console.log("Complete!")
@@ -36,3 +56,5 @@ const users = [
 }
 
 seedDatabase()
+
+export default users
