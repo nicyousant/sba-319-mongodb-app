@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <script src="/js/script.js" defer></script>
+</head>
+<body>
+    <h1>Add recommendation:</h1>
+    <form action="/recommendations/create" method="POST" class="form form-create">
+        <label for="name">
+            Place:
+            <input type="text" name="place" id="place" required minlength="3">
+        </label>
+        <label for="reason">
+            Reason:
+            <input type="text" name="reason" id="reason" required minlength="3">
+        </label>
+   <label for="visit_when">
+            When to Visit:
+            <input type="text" name="visit_when" id="visit_when">
+        </label>
+         
+        <button>Create</button>
+    </form>
+    <br><br><br>
+    <p>
+        <a href="/recommendations">Back</a>
+    </p>
+</body>
+</html>

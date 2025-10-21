@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <script src="/js/script.js" defer></script>
+</head>
+<body>
+    <h1>User details:</h1>
+    <form class="form form-show">
+        <label for="name">
+            Name:
+            <input type="text" name="name" id="name" value="<%= user.name %>" disabled>
+        </label>
+        <label for="email">
+            Email:
+            <input type="text" name="email" id="email" value="<%= user.email %>" disabled>
+        </label>
+       <label for="favorite_destinations">
+            Favorite Destinations:
+            <input type="text" name="favorite_destinations" id="favorite_destinations" value="<%= user.favorite_destinations %>" disabled>
+        </label>
+         <label for="wishlist">
+            Wishlist:
+            <input type="text" name="wishlist" id="wishlist" value="<%= user.wishlist %>" disabled>
+        </label>
+        <a href="/users/<%= user._id %>/edit">Edit</a>
+    </form>
+    <br><br><br>
+    <p>
+        <a href="/users">Back</a>
+    </p>
+    <form action="/users/<%= user._id %>?_method=DELETE" method="POST" class="align-right"><button>Delete</button></form>
+</body>
+</html>

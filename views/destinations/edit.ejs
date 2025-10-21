@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <script src="/js/script.js" defer></script>
+</head>
+<body>
+    <h1>Edit a destination:</h1>
+    <form action="/destinations/<%= destination._id %>?_method=PUT" method="POST" class="form form-edit">
+        <label for="city">
+            City:
+            <input type="text" name="city" id="city" value="<%= destination.city %>">
+        </label>
+        <label for="Country">
+            Country:
+            <input type="text" name="country" id="country" value="<%= destination.country %>">
+        </label>
+   <label for="year_visited">
+            Year Visited:
+            <input type="number" name="year_visited" id="year_visited" value="<%= destination.year_visited %>">
+        </label>
+          <label for="highlights">
+            Highlights:
+            <input type="text" name="highlights" id="highlights" value="<%= destination.highlights %>">
+        </label>
+        <label for="foods">
+            Foods:
+            <input type="text" name="foods" id="foods" value="<%= destination.foods %>">
+        </label>
+        <button>Update</button>
+    </form>
+    <br><br><br>
+    <p>
+        <a href="/destinations/<%= destination._id %>">Back</a>
+    </p>
+</body>
+</html>

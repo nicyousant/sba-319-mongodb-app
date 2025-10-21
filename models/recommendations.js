@@ -10,8 +10,9 @@ const recommendationSchema = new mongoose.Schema({
         type: String,
         required: true 
     },
-    visit_when: { 
-        enum: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
+    visit_when: {
+        type: String, 
+        enum: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
     }
 })
 

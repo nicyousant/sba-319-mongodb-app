@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <script src="/js/script.js" defer></script>
+</head>
+<body>
+    <h1>Recommendation details:</h1>
+    <form class="form form-show">
+        <label for="place">
+            Place:
+            <input type="text" name="place" id="place" value="<%= recommendation.place %>" disabled>
+        </label>
+        <label for="reason">
+            Reason:
+            <input type="text" name="reason" id="reason" value="<%= recommendation.reason %>" disabled>
+        </label>
+       <label for="visit_when">
+            When to Visit:
+            <input type="text" name="visit_when" id="visit_when" value="<%= recommendation.visit_when %>" disabled>
+        </label>
+         
+        <a href="/recommendations/<%= recommendation._id %>/edit">Edit</a>
+    </form>
+    <br><br><br>
+    <p>
+        <a href="/recommendations">Back</a>
+    </p>
+    <form action="/recommendations/<%= recommendation._id %>?_method=DELETE" method="POST" class="align-right"><button>Delete</button></form>
+</body>
+</html>

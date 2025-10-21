@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <script src="/js/script.js" defer></script>
+</head>
+<body>
+    <h1>Add user:</h1>
+    <form action="/users/create" method="POST" class="form form-create">
+        <label for="name">
+            Name:
+            <input type="text" name="name" id="name" required minlength="3">
+        </label>
+        <label for="email">
+            Email:
+            <input type="text" name="email" id="email" required minlength="3">
+        </label>
+   <label for="favorite_destinations">
+            Favorite Destinations:
+            <input type="text" name="favorite_destinations" id="favorite_destinations">
+        </label>
+         <label for="wishlist">
+            Wishlist:
+            <input type="text" name="wishlist" id="wishlist">
+        </label>
+        <button>Create</button>
+    </form>
+    <br><br><br>
+    <p>
+        <a href="/users">Back</a>
+    </p>
+</body>
+</html>

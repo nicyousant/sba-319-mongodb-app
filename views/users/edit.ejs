@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <script src="/js/script.js" defer></script>
+</head>
+<body>
+    <h1>Edit a user:</h1>
+    <form action="/users/<%= user._id %>?_method=PUT" method="POST" class="form form-edit">
+        <label for="name">
+            Name:
+            <input type="text" name="name" id="name" value="<%= user.name %>">
+        </label>
+        <label for="email">
+            Email:
+            <input type="text" name="email" id="email" value="<%= user.email %>">
+        </label>
+   <label for="favorite_destinations">
+            Favorite Destinations:
+            <input type="text" name="favorite_destinations" id="favorite_destinations" value="<%= user.favorite_destinations %>">
+        </label>
+          <label for="wishlist">
+            Wishlist:
+            <input type="text" name="wishlist" id="wishlist" value="<%= user.wishlist %>">
+        </label>
+        <button>Update</button>
+    </form>
+    <br><br><br>
+    <p>
+        <a href="/users/<%= user._id %>">Back</a>
+    </p>
+</body>
+</html>

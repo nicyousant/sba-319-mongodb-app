@@ -10,12 +10,22 @@ const recommendations = [
     {
         place:'San Francisco, CA, USA',
         reason: 'Golden Gate Bridge, Lombard Street, Pier 39, sea lions',
-        visit_when: 'June'
+        visit_when: 'August'
     },
      {
         place:'New York, NY, USA',
         reason: 'Statue of Liberty, Times Square, Metropolitan Museum of Art',
-        visit_when: 'June'
+        visit_when: 'July'
+    },
+      {
+        place:'Puerto Plata, Dominican Republic',
+        reason: 'Del Oro Chocolate Factory, Brugal Rum Distillery, Teleferico Cable Car',
+        visit_when: 'May'
+    },
+    {
+        place:'San Juan, Puerto Rico',
+        reason: 'El Yunque Rainforest, Luquillo Beach, Bioluminescent Bay',
+        visit_when: 'May'
     },
 ]
 
@@ -39,7 +49,26 @@ const recommendations = [
 // seedDatabase()
 
 // Mongoose version
- async function seedDatabase() {
+//  async function seedDatabase() {
+//     try{
+//         console.log("seeding recommendations data");
+//         // const collection = await mongoose.connect("recommendations")
+//         const resultDelete = await Recommendations.deleteMany({})
+//         const resultInsert = await Recommendations.insertMany(recommendations)
+//         console.log(resultDelete)
+//         console.log(resultInsert)
+//         console.log("Complete!")
+//     } catch (e) {
+//         console.log(e);
+//     } finally {
+//     await db.connection.close(); // Close connection after finishing
+//     // process.exit();
+//   }
+// }
+
+// seedDatabase()
+
+ async function seedRecommendations() {
     try{
         console.log("seeding recommendations data");
         // const collection = await mongoose.connect("recommendations")
@@ -47,13 +76,12 @@ const recommendations = [
         const resultInsert = await Recommendations.insertMany(recommendations)
         console.log(resultDelete)
         console.log(resultInsert)
-        console.log("Complete!")
+        console.log("Recommendations successfully seeded!")
     } catch (e) {
         console.log(e);
     }
-    process.exit()
 }
 
-seedDatabase()
 
-export default recommendations
+
+export { recommendations, seedRecommendations }

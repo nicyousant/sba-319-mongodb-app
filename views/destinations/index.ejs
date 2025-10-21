@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="/users">Users</a><a href="/destinations">Destinations</a><a href="/recommendations">Recommendations</a>
+        </nav>
+    </header>
+    <main>
+        <!-- <p>
+            <img src="images/vegetables.png" alt="some vegetables">
+        </p> -->
+        <h1>List of Destinations:</h1>
+        <ul>
+            <% destinations.forEach(destination => { %>
+                <li><a href="/destinations/<%= destination._id %>"> <%= destination.city %>, <%= destination.country %></a></li>
+            <% }) %> 
+        </ul>
+        <br><br><br>
+        <p>
+            <a href="/destinations/new">Add a new destination</a>
+            <a href="/destinations/seed" class="align-right">Reset destinations</a>
+        </p>
+    </main>
+</body>
+</html>

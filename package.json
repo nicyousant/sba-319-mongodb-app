@@ -1,19 +1,29 @@
 {
   "name": "sba-319-mongodb-app",
   "version": "1.0.0",
-  "description": "",
+  "description": "SBA 319: MongoDB Database Application",
   "main": "index.js",
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "seed": "node seeders/destinationseed.js && node seeders/recommendationseed.js && node seeders/userseed.js && nodemon index.js"
+    "seed": "node seeders/indexseed.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "dotenv": "^17.2.3",
+    "ejs": "^3.1.10",
     "express": "^5.1.0",
+    "method-override": "^3.0.0",
     "mongoose": "^8.19.1"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nicyousant/sba-319-mongodb-app.git"
+  },
+  "bugs": {
+    "url": "https://github.com/nicyousant/sba-319-mongodb-app/issues"
+  },
+  "homepage": "https://github.com/nicyousant/sba-319-mongodb-app#readme"
 }
