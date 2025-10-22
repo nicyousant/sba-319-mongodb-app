@@ -31,11 +31,11 @@
             Foods:
             <input type="text" name="foods" id="foods" value="<%= destination.foods %>" disabled>
         </label>
-        <a href="/destinations/<%= destination._id %>/edit">Edit</a>
+        <button><a style="text-decoration:none" href="/destinations/<%= destination._id %>/edit">Edit</a></button>
     </form>
-    <br><br><br>
+    <br>
     <p>
-        <a href="/destinations">Back</a>
+        <a href="/destinations"><button>Back</button></a>
     </p>
     <form action="/destinations/<%= destination._id %>?_method=DELETE" method="POST" class="align-right"><button>Delete</button></form>
 </body>
