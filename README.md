@@ -17,7 +17,7 @@ Bonus Objective
 
 Routes
  - /: Home
- Destinations
+
  - /destinations = READ/GET all destinations
  - /destinations/new = READ/GET: Form to add a new destination
  - /destinations/seed = Reset original destinations
@@ -26,7 +26,7 @@ Routes
  - /destinations/:id = UPDATE/PUT: Submit edits
  - /destinations/:id = DELETE destination with this id
  - /destinations/:id = READ/GET: Show destination with this id
- Recommendations
+
  - /recommendations = READ/GET all recommendations
  - /recommendations/new = READ/GET: Form to add a new recommendation
  - /recommendations/seed = Reset original recommendations
@@ -35,7 +35,7 @@ Routes
  - /recommendations/:id = UPDATE/PUT: Submit edits
  - /recommendations/:id = DELETE recommendation with this id
  - /recommendations/:id = READ/GET: Show recommendation with this id
- Users
+
  - /users = READ/GET all users
  - /users/new = READ/GET: Form to add a new user
  - /users/seed = Reset original users
