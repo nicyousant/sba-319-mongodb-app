@@ -60,7 +60,18 @@ app.get('/', (req,res) => {
     <li class="nav"><a href="/users">Users</a></li>
   </ul>
   <!-- <hr> -->
-</header><h1>Our Travel Diary</h1></body>
+</header>
+<div class="content">
+<div>
+<h1>Our Travel Diary</h1>
+<h2>Join us for our journey around the world!</h2>
+<p>Share the places you've already visited and recommend places for others to visit.</p>
+</div>
+<div>
+<img src="plane-wing.jpg" class="plane">
+</div>
+</div>
+</body>
 </html>`)
  })
 

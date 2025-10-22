@@ -18,17 +18,25 @@
         <!-- <p>
             <img src="images/vegetables.png" alt="some vegetables">
         </p> -->
-        <h1>List of Recommendations:</h1>
+        <div class="content">
+        <div>
+            <h1>List of Recommendations:</h1>
+      
         <ul>
             <% recommendations.forEach(recommendation => { %>
                 <li><a href="/recommendations/<%= recommendation._id %>"> <%= recommendation.place %> </a></li>
             <% }) %> 
         </ul>
-        <br><br><br>
+        <br>
         <p>
-            <a href="/recommendations/new">Add a new recommendation</a>
-            <a href="/recommendations/seed" class="align-right">Reset recommendations</a>
+            <a href="/recommendations/new"><button>Add a new recommendation</button></a>
+            <a href="/recommendations/seed" class="align-right"><button>Reset recommendations</button></a>
         </p>
+        </div>
+        <div>
+        <img src="plane-wing.jpg" class="plane">
+        </div>
+        </div>
     </main>
 </body>
 </html>
