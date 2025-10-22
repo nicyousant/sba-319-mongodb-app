@@ -36,17 +36,35 @@ app.use("/destinations", destroute)
 app.use("/recommendations", recsroute)
 
 
-app.get("/", (req, res) => {
-    res.redirect("/users")
-})
-
-
-// app.get('/', (req,res) => {
-//     res.send('<h1>Good morning, Nicole!</h1> <h2>Pay attention!</h2><h3>Are you still there?</h3>')
+// app.get("/", (req, res) => {
+//     res.redirect("/users")
 // })
 
-// app.use("/grades", grades);
-// app.use("/grades", grades_agg);
+
+app.get('/', (req,res) => {
+    //  res.send(`<body style="background: url('globe.jpg')";><h1>Good morning, Nicole!</h1> <h2>Pay attention!</h2><h3>Are you still there?</h3></body>`)
+    res.send(`<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="js/script.js" defer></script>
+</head>
+<body><header>
+  <ul class="navbar">
+    <li class="nav"><a href="/">Home</a></li>
+    <li class="nav"><a href="/destinations">Destinations</a></li>
+    <li class="nav"><a href="/recommendations">Recommendations</a></li>
+    <li class="nav"><a href="/users">Users</a></li>
+  </ul>
+  <!-- <hr> -->
+</header><h1>Our Travel Diary</h1></body>
+</html>`)
+ })
+
+
 
 // Global error handling
 app.use((err, req, res, next) => {

@@ -4,12 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="styles.css">
     <script src="/js/script.js" defer></script>
 </head>
 <body>
+        <%- include('../partials/header') %>
     <h1>Add user:</h1>
-    <form action="/users/create" method="POST" class="form form-create">
+    <form action="/users/create" method="POST" class="form-create">
         <label for="name">
             Name:
             <input type="text" name="name" id="name" required minlength="3">
