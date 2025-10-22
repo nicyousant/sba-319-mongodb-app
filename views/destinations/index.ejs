@@ -15,9 +15,8 @@
     </header> -->
     <%- include('../partials/header') %>
     <main>
-        <!-- <p>
-            <img src="images/vegetables.png" alt="some vegetables">
-        </p> -->
+       <div class="content">
+        <div>
         <h1>List of Destinations:</h1>
         <ul>
             <% destinations.forEach(destination => { %>
@@ -29,6 +28,11 @@
             <a href="/destinations/new"><button>Add a new destination</button></a>
             <a href="/destinations/seed" class="align-right"><button>Reset destinations</button></a>
         </p>
+            </div>
+        <div>
+        <img src="plane-wing.jpg" class="plane">
+        </div>
+        </div>
     </main>
 </body>
 </html>
